@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Press Start 2P', cursive;
+            
+        }
+        body{
+            background-color: #453474;
+            display: flex;
+            height: 97vh;
+            justify-content: center;
+            align-items: center;
+        }
+        canvas{
+            border: solid 3px white;
+            border-radius: 2%;
+            box-shadow: 0px 5px 15px 0px rgba(255,255,255,0.75);
+        }
+        button:hover{
+            background-color: #8990ce;
+            scale: 1.1;
+        }
+    </style>
+</head>
+<body>
+    <div style="position: relative; display: inline-block;">
+        <div style="padding: 15px; position: absolute; display: flex; width: 100%; align-items: center;">
+
+            <div style="position: relative; width: 100%; border-top:solid 4px white; border-bottom:solid 4px white; border-left:solid 4px white;">
+                <div style="background-color: gray; height: 30px;"></div>
+                <div id="playerHealth" style="position: absolute; height: 30px; width: 100%; right: 0; top: 0; bottom: 0; background-color: #818CF8;"></div>
+            </div>
+
+            <div id="timer" style="height: 50px; border:solid 4px white; width: 100px; display: flex; align-items: center; justify-content: center; color:white; border-radius: 10%; background-color: rgba(67, 17, 77, 0.404); flex-shrink: 0">
+            60
+            </div>
+            
+            <div style="position: relative;width: 100%;  border-top:solid 4px white; border-bottom:solid 4px white; border-right:solid 4px white;">
+                <div style="background-color: gray; height: 30px;"></div>
+                <div id="player2Health" style="position: absolute; height: 30px; width: 100%; left: 0; top: 0; bottom: 0; background-color: #818CF8;"></div>
+            </div>
+        </div>
+        <div id="displayText" style="position: absolute; color: rgb(14, 26, 59); display: flex; align-items: center; justify-content: center;top:0; bottom: 0;left: 0; right: 0; display: none;">
+            Tie
+        </div>
+        <div id="restart" style="position: absolute; color: rgb(14, 26, 59); display: flex; align-items: center; justify-content: center;top: 330px; bottom: 150;left: 0; right: 0; display: none;">
+            <button style="cursor: pointer; padding: 10px; height: 25; width: 110; border-radius: 4px; background-color: #8990ce48;">
+                Restart
+            </button>
+        </div>
+        <canvas></canvas>
+    </div>
+    <script src="js/utils.js"></script>
+    <script src="js/classes.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
